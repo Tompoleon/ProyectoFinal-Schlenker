@@ -1,0 +1,150 @@
+
+
+
+
+.navbar {
+  background-color: #2d3748; /* Fondo gris oscuro */
+  padding: 1rem; /* Espacio interno para que el contenido no toque los bordes */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Sombra sutil */
+  position: fixed; /* Fijo en la parte superior al hacer scroll */
+  width: 100%; /* Ocupa todo el ancho de la ventana */
+  top: 0; /* Se posiciona en la parte superior */
+  z-index: 50; /* Asegura que esté por encima de otros elementos */
+  box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho/alto */
+}
+
+/* Contenedor interno que organiza el logo, enlaces y carrito */
+.navbar-container {
+  /* ¡CAMBIOS CLAVE AQUÍ! */
+  /* Eliminamos max-width y margins auto para que no se centre y se alinee a la izquierda */
+  /* Si quieres un ancho máximo para el contenido, deberías envolver los elementos
+     interiores en otro div con max-width y margin: auto */
+  width: 100%; /* Asegura que ocupe el 100% del ancho de su padre (navbar) */
+  display: flex; /* Habilita Flexbox */
+  flex-direction: row; /* Los elementos se disponen en fila (horizontalmente) por defecto */
+  justify-content: flex-start; /* Los elementos se alinean al inicio (izquierda) del contenedor */
+  align-items: center; /* Los elementos se centran verticalmente dentro de la fila */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
+}
+
+/* Media query para pantallas más grandes (equivalente a 'md' en Tailwind, 768px) */
+@media (min-width: 768px) {
+  .navbar-container {
+    /* En pantallas grandes, distribuimos el espacio entre el logo y el resto de los elementos */
+    justify-content: space-between;
+    /* max-width: 1200px;  Si quieres limitar el ancho del contenido en pantallas grandes y centrarlo dentro de la barra,
+       puedes agregar esta línea de nuevo aquí, y funcionará en conjunto con justify-content: space-between; */
+  }
+}
+
+/* Estilos para el logo de la tienda */
+.navbar-logo h1 {
+  color: #fff; /* Color de texto blanco */
+  font-size: 1.5rem; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  padding: 0.5rem 0.75rem; /* Espacio interno */
+  border-radius: 0.375rem; /* Esquinas redondeadas */
+  background: linear-gradient(to right, #8b5cf6, #4f46e5); /* Fondo con gradiente púrpura/índigo */
+  transition: all 0.3s ease; /* Transición suave para efectos hover */
+  margin-right: 1.5rem; /* Espacio a la derecha del logo */
+}
+
+.navbar-logo h1:hover {
+  background: linear-gradient(to right, #7c3aed, #4338ca); /* Gradiente más oscuro al pasar el ratón */
+}
+
+/* Estilos para la lista de enlaces de navegación */
+.navbar-links {
+  display: flex; /* Habilita Flexbox para los enlaces */
+  align-items: center; /* Centra los enlaces verticalmente */
+  list-style: none; /* Elimina las viñetas predeterminadas de la lista */
+  margin: 0; /* Elimina el margen predeterminado de la lista */
+  padding: 0; /* Elimina el padding predeterminado de la lista */
+  /* ¡CAMBIO CLAVE AQUÍ! */
+  /* Eliminamos margin-left: auto para que los enlaces no se separen automáticamente a la derecha
+     y se mantengan junto al logo o al inicio de la línea */
+  /* margin-left: auto; */
+  flex-wrap: wrap; /* Permite que los enlaces individuales se envuelvan si no caben en una línea */
+  justify-content: flex-start; /* Asegura que los enlaces envueltos también empiecen a la izquierda */
+  margin-top: 0.5rem; /* Pequeño margen superior si los elementos se envuelven */
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    margin-top: 0; /* Resetea el margen superior en pantallas grandes */
+    /* Para pantallas grandes, si quieres que los enlaces estén pegados al carrito y ambos a la derecha,
+       puedes añadir 'margin-left: auto;' aquí para empujarlos. */
+  }
+}
+
+.navbar-links li {
+  margin-left: 0.75rem; /* Espacio entre cada elemento de la lista (enlace) */
+  margin-right: 0.75rem;
+}
+
+.navbar-links a {
+  color: #d1d5db; /* Color de texto gris claro */
+  text-decoration: none; /* Elimina el subrayado */
+  padding: 0.5rem 0.75rem; /* Espacio interno */
+  border-radius: 0.375rem; /* Esquinas redondeadas */
+  font-size: 1rem; /* Tamaño de fuente base */
+  font-weight: 500; /* Grosor de fuente medio */
+  transition: color 0.2s ease; /* Transición suave del color de texto al pasar el ratón */
+}
+
+.navbar-links a:hover {
+  color: #fff; /* Color de texto blanco al pasar el ratón */
+}
+
+/* Estilos para el widget del carrito de compras */
+.cart-widget {
+  position: relative; /* Para posicionar el contador con respecto a este elemento */
+  padding: 0.5rem; /* Espacio interno */
+  border-radius: 9999px; /* Completamente redondo */
+  transition: background-color 0.2s ease; /* Transición suave del fondo */
+  cursor: pointer; /* Cambia el cursor a un puntero */
+  display: flex; /* Habilita Flexbox para alinear el SVG y el span */
+  align-items: center; /* Centra verticalmente el icono y el contador */
+  margin-left: 1rem; /* Margen a la izquierda para separarlo del último enlace */
+  margin-top: 0.5rem; /* Margen superior si se envuelve en móvil */
+}
+
+@media (min-width: 768px) {
+  .cart-widget {
+    margin-top: 0; /* Resetea el margen superior en pantallas grandes */
+  }
+}
+
+.cart-widget:hover {
+  background-color: #4b5563; /* Fondo gris más oscuro al pasar el ratón */
+}
+
+/* Estilos para el icono SVG del carrito */
+.cart-icon {
+  height: 1.5rem; /* Alto del icono */
+  width: 1.5rem; /* Ancho del icono */
+  color: #fff; /* Color del icono blanco */
+}
+
+/* Estilos para el contador de elementos en el carrito */
+.cart-count {
+  position: absolute; /* Posicionamiento absoluto con respecto a .cart-widget */
+  top: 0; /* Alineado a la parte superior de .cart-widget */
+  right: 0; /* Alineado a la derecha de .cart-widget */
+  display: inline-flex; /* Habilita Flexbox para centrar el número */
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem; /* Espacio interno */
+  font-size: 0.75rem; /* Tamaño de fuente pequeño */
+  font-weight: bold; /* Negrita */
+  line-height: 1; /* Elimina espacio extra de línea */
+  color: #fee2e2; /* Color de texto rojo claro */
+  background-color: #dc2626; /* Fondo rojo */
+  border-radius: 9999px; /* Completamente redondo */
+  transform: translate(50%, -50%); /* Mueve el contador para que se superponga en la esquina */
+}
+
+/* Espacio para que el contenido de la página no quede oculto bajo el navbar fijo */
+body {
+    padding-top: 5rem; /* Ajusta este valor según la altura real de tu navbar */
+}
