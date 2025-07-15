@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartWidget = () => {
+function CartWidget () {
     return (
         <div className="cart-widget">
             <span role="img" aria-label="cart">🛒</span>
