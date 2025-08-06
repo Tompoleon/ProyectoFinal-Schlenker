@@ -6,13 +6,14 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx';
 import RoutesConfig from './Routes'; 
+import './FirebaseConfig.js';
 
 function App() {
-const saludo = "Bienvenido a mi ecommerce";
+
   return (
     <>
     <NavBar />
-    <RoutesConfig saludo={saludo} />
+    <RoutesConfig  />
 
     </>
   )

@@ -1,22 +1,27 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 
 function ItemListContainer({ saludo }) {
-  
   const { categoryId } = useParams();
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://66d332ac184dce1713cf9442.mockapi.io/productos') 
-      .then(res => res.json())
-      .then(data => {
-        const filtrados = categoryId
-          ? data.filter(p => p.category === categoryId)
-          : data;
-        setProductos(filtrados);
+    const db = getFirestore();
+    const productosRef = collection(db, 'productos');
+    let q = productosRef;
+
+    if (categoryId) {
+      q = query(productosRef, where('category', '==', categoryId));
+    }
+
+    getDocs(q)
+      .then((snapshot) => {
+        const items = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setProductos(items);
       })
       .catch(err => console.error(err))
       .finally(() => setLoading(false));

@@ -9,7 +9,7 @@ function NavBar() {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <h1>Ecommerce</h1>
+                <h1>Despertares</h1>
             </div>
             <ul className="navbar-links">
                 <li><Link to="/">Home</Link></li>
@@ -21,8 +21,8 @@ function NavBar() {
                     <Link to="/products">Products</Link>
                     {isHovered && (
                         <ul className="dropdown">
-                            <li><Link to="/category/category1">Category 1</Link></li>
-                            <li><Link to="/category/category2">Category 2</Link></li>
+                            <li><Link to="/category/remeras">Remeras</Link></li>
+                            <li><Link to="/category/buzos">Buzos</Link></li>
                         </ul>
                     )}
                 </li>

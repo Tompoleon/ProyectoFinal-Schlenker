@@ -1,12 +1,24 @@
-# React + Vite
+# Mi Tienda E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el repositorio de un proyecto de e-commerce desarrollado con React, como parte de un curso de desarrollo Front End. La aplicación busca ofrecer una experiencia de compra fluida, con listado de productos, carrito de compras y gestión de pedidos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades Principales
 
-## Expanding the ESLint configuration
+* **Catálogo de Productos:** Visualización dinámica de productos.
+* **Detalle de Producto:** Vista individual para cada producto.
+* **Carrito de Compras:** Gestión de productos seleccionados y cantidades.
+* **Navegación:** Uso de React Router para una experiencia de Single Page Application.
+* **Base de Datos:** Integración con Firebase Firestore para almacenar productos y órdenes de compra.
+* **Estado Global:** Gestión del estado del carrito con React Context.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+* **React:** Biblioteca principal para la interfaz de usuario.
+* **React Router DOM:** Para la navegación entre rutas.
+* **Firebase Firestore:** Base de datos NoSQL para almacenamiento de datos.
+* **CSS Puro:** Para el estilizado de los componentes.
+* **Vite:** Herramienta de construcción rápida para el entorno de desarrollo.
