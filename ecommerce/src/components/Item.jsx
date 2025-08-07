@@ -4,8 +4,8 @@ function Item({ product }) {
   return (
     <div className="product-card">
       <h3>{product.nombre}</h3>
-      <p>Precio: {product.precio}</p>
-      <p>Categoría: {product.category}</p>
+      <img src={product.imagen} alt="Remera" style={{ width: '100%', maxWidth: '300px', marginBottom: '1rem' }}/>
+      <p>Precio: ${product.precio}</p>
       <Link to={`/product/${product.id}`}>Ver detalle</Link>
     </div>
   );

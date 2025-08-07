@@ -1,6 +1,6 @@
 # Mi Tienda E-commerce
 
-Este es el repositorio de un proyecto de e-commerce desarrollado con React, como parte de un curso de desarrollo Front End. La aplicación busca ofrecer una experiencia de compra fluida, con listado de productos, carrito de compras y gestión de pedidos.
+Este es el repositorio de un proyecto de e-commerce desarrollado con React, como parte de la entrega final del curso de Reactjs. La aplicación busca ofrecer una experiencia de compra fluida, con listado de productos, carrito de compras y gestión de pedidos.
 
 ---
 

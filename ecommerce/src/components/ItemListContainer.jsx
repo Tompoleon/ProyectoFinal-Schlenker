@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 
-function ItemListContainer({ saludo }) {
+function ItemListContainer({}) {
   const { categoryId } = useParams();
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,7 +31,6 @@ function ItemListContainer({ saludo }) {
 
   return (
     <div className='ItemListContainer'>
-      <h2>{saludo}</h2>
       <ItemList productos={productos} />
     </div>
   );

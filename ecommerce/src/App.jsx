@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx';
 import RoutesConfig from './Routes'; 
 import './FirebaseConfig.js';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <>
     <NavBar />
     <RoutesConfig  />
+    <Footer />
 
     </>
   )
