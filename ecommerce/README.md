@@ -22,3 +22,9 @@ Este es el repositorio de un proyecto de e-commerce desarrollado con React, como
 * **Firebase Firestore:** Base de datos NoSQL para almacenamiento de datos.
 * **CSS Puro:** Para el estilizado de los componentes.
 * **Vite:** Herramienta de construcción rápida para el entorno de desarrollo.
+
+---
+
+## Link a la pagina con netlify
+
+* **Link:** https://poetic-dango-13ef66.netlify.app/
